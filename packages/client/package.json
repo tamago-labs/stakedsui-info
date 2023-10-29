@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "@mysten/sui.js": "^0.45.0",
+    "axios": "^1.6.0",
+    "bignumber.js": "^9.1.2",
     "date-fns": "2.21.1",
     "next": "13.5.4",
     "react": "^18",

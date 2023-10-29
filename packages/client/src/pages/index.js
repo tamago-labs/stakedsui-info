@@ -9,22 +9,49 @@ import HowToStake from '@/components/howToStake'
 import RecentListing from '@/components/recentListing'
 import Dashboard from '@/components/Dashboard'
 import AllValidators from '@/components/AllValidators'
+import Summary from '@/components/Summary'
+import useSui from '@/hooks/useSui'
+import Faq from '@/components/Faq'
 
 const mont = Montserrat({
   weight: '400',
   subsets: ['latin'],
 })
 
-export default function Home() {
+export default function Home({ summary, validators }) {
+
   return (
     <main
       className={`${mont.className}`}
     >
       <Header />
-      <StakedSuiInfoJumbotron/>
-      <Dashboard/>
-      <AllValidators/>
+      <Summary 
+        validators={validators}
+        summary={summary}
+      />
+      {/* <StakedSuiInfoJumbotron/> */}
+      {/* <Dashboard/> */}
+      <AllValidators 
+        validators={validators}
+        summary={summary}
+      />
+      <Faq/>
       <Footer />
     </main>
   )
+}
+
+export async function getStaticProps() {
+
+  const  { fetchDashboard } = useSui()
+
+  const { summary, validators } = await fetchDashboard()
+
+  return {
+    props: {
+      summary,
+      validators
+    },
+    revalidate: 600
+  };
 }

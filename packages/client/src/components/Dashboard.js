@@ -4,30 +4,30 @@ import { format, parseISO, subDays } from "date-fns";
 
 const data = [];
 for (let num = 30; num >= 0; num--) {
-  data.push({
-    date: subDays(new Date(), num).toISOString().substr(0, 10),
-    value: 1 + Math.random()
-  });
+    data.push({
+        date: subDays(new Date(), num).toISOString().substr(0, 10),
+        value: 1 + Math.random()
+    });
 }
 
 function CustomTooltip({ active, payload, label }) {
     if (active) {
-      return (
-        <div className="tooltip text-white">
-          <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
-          <p>${payload[0].value.toFixed(2)} CAD</p>
-        </div>
-      );
+        return (
+            <div className="tooltip text-white">
+                <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
+                <p>${payload[0].value.toFixed(2)} CAD</p>
+            </div>
+        );
     }
     return null;
-  }
-  
+}
 
-const AreaChartPlot = () => { 
+
+const AreaChartPlot = () => {
 
     return (
         <>
-            <ResponsiveContainer width="100%" height="100%"> 
+            <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={data}>
                     <defs>
                         <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
@@ -42,10 +42,10 @@ const AreaChartPlot = () => {
                         dataKey="date"
                         axisLine={false}
                         tickLine={false}
-                        style={{ fill: '#fff' , fontSize: "12px"}}
+                        style={{ fill: '#fff', fontSize: "12px" }}
                         tickFormatter={(str) => {
-                            const date = parseISO(str) 
-                            return date.toLocaleDateString() 
+                            const date = parseISO(str)
+                            return date.toLocaleDateString()
                         }}
                     />
 
@@ -207,4 +207,38 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+const DashboardV1 = () => {
+    return (
+        <div class="w-full mx-auto max-w-screen-xl p-2  flex  flex-col justify-between"> 
+            <div className="grid grid-cols-3  gap-5">
+
+                <div className="col-span-3 sm:col-span-1">
+                    <div className="grid grid-cols-6 py-2 gap-5">
+                        <div className="col-span-4 mt-auto mb-auto">
+                            <h2>Next reward distribution in</h2>
+                            <h4
+                                className="text-sm font-bold  text-white"
+                            >
+                                10h 40m 20s
+                            </h4>
+                        </div>
+                        <div className="col-span-2 mt-auto mb-auto flex flex-col">
+                            <h2 className="ml-auto">Avg APY</h2>
+                            <h4
+                                className="text-2xl sm:text-4xl ml-auto tracking-widest font-extrabold text-white"
+                            >4.15%</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    )
+}
+
+
+export default DashboardV1

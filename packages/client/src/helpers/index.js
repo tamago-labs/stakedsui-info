@@ -19,3 +19,20 @@ export const slugify = (text) => {
 export const shorterText = (name, limit = 40) => {
     return name.length > limit ? `${name.slice(0, limit)}...` : name
 }
+
+export const secondsToHHMMSS = (totalSeconds) => {
+    var hours = Math.floor(totalSeconds / 3600);
+    var minutes = Math.floor((totalSeconds - (hours * 3600)) / 60);
+    var seconds = totalSeconds - (hours * 3600) - (minutes * 60);
+
+    // Padding the values to ensure they are two digits
+    if (hours < 10) { hours = "0" + hours; }
+    if (minutes < 10) { minutes = "0" + minutes; }
+    if (seconds < 10) { seconds = "0" + seconds; }
+
+    return {
+        hours,
+        minutes,
+        seconds
+    }
+}

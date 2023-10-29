@@ -15,23 +15,22 @@ const Provider = ({ children }) => {
         (curVal, newVal) => ({ ...curVal, ...newVal }),
         {
             panel: PANEL.NONE,
-            slug: undefined
+            data: undefined
         }
     )
 
-    const { slug, panel } = values
+    const { data, panel } = values
 
-    const showValidatorPanel = (slug) => {
+    const showValidatorPanel = (data) => {
         dispatch({
             panel: PANEL.VALIDATOR,
-            slug
+            data
         })
     }
 
     const closePanel = () => {
         dispatch({
-            panel: PANEL.NONE,
-            slug: undefined
+            panel: PANEL.NONE
         })
     }
 
@@ -48,7 +47,7 @@ const Provider = ({ children }) => {
             <ValidatorDetails
                 visible={panel === PANEL.VALIDATOR}
                 close={closePanel}
-                slug={slug}
+                data={data}
             />
             {children}
         </PanelContext.Provider>

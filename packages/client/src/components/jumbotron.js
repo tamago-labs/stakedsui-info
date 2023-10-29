@@ -4,30 +4,35 @@ import { ExternalLink } from "react-feather"
 export const StakedSuiInfoJumbotron = () => {
     return (
         <div class="w-full mx-auto max-w-screen-xl p-2 pb-1 pt-0 flex flex-col justify-between">
-            <div className="grid grid-cols-4 p-2 gap-5">
-                <div className="col-span-4 sm:col-span-2">
-                    <h1 class="mb-2 text-xl sm:text-2xl font-extrabold text-white">
+            <div className="grid grid-cols-7  gap-5">
+                <div className="col-span-7 lg:col-span-3 flex">
+                    {/* <h1 class="mb-2 text-xl sm:text-2xl font-extrabold text-white">
                         Sui APY Tracker{` `}📈
-                    </h1>
-                    <p class="text-sm">
-                        Track Sui Staking APY on your portfolio, each validator or the entire system
-                    </p>
-                    <div class="text-xs py-2">
-                        <a href="https://docs.stakedsui.info/wiki/what-is-staked-sui" target="_blank" className="mr-1 hover:underline">
-                            What is Staked Sui?
-                        </a>
-                        |
-                        <a href="https://docs.stakedsui.info/guide/staking-sui-for-beginners" target="_blank" className="ml-1 mr-1 hover:underline">
-                            Staking Sui for Beginners
-                        </a>
-                        {/* |
+                    </h1> */}
+                    <div className="mt-auto mb-auto">
+                        <p class="text-sm text-white">
+                            A simple dashboard to track staking rewards on Sui blockchain
+                        </p>
+                        <div class="text-xs py-2">
+
+                            <a href="https://docs.stakedsui.info/guide/staking-sui-for-beginners" target="_blank" className="mr-1 hover:underline">
+                                How to staking Sui
+                            </a>
+                            |
+                            <a href="https://docs.stakedsui.info/wiki/what-is-staked-sui" target="_blank" className="ml-1 mr-1 hover:underline">
+                                What is Staked Sui?
+                            </a>
+
+                            {/* |
                         <a href="https://docs.stakedsui.info/guide/guide-to-managing-staked-sui-objects" target="_blank" className="ml-1 hover:underline">
                             Guide to Managing Staked Sui
                         </a> */}
+                        </div>
                     </div>
+
                 </div>
-                <div className="col-span-4 sm:col-span-2">
-                    <a href="https://legato.finance" target="_blank">
+                <div className="col-span-4 lg:col-span-4">
+                    {/* <a href="https://legato.finance" target="_blank">
                         <div class="  w-full rounded-md bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400 p-[2px]">
                             <div class="flex pt-1 pb-1 h-full w-full  bg-[#001237] back ">
                                 <div className="w-full grid grid-cols-10 p-2 gap-1">
@@ -50,7 +55,68 @@ export const StakedSuiInfoJumbotron = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </a> */}
+
+
+
+
+
+                    {/* <div className="col-span-2 sm:col-span-1">
+                            <div className="grid grid-cols-6 py-2 gap-5">
+                                <div className="col-span-4 mt-auto mb-auto">
+                                    <h2>Volume (24H)</h2>
+                                    <h4
+                                        className="text-sm font-bold  text-white"
+                                    >
+                                        $102,928.98
+                                    </h4>
+                                </div>
+                                <div className="col-span-2 mt-auto mb-auto flex flex-col">
+                                    <h2 className="ml-auto">Tokens staked</h2>
+                                    <h4
+                                        className="text-sm font-bold ml-auto text-white"
+
+                                    >$708.1M</h4>
+                                </div>
+                            </div>
+                        </div> */}
+
+                    <div className="grid grid-cols-10 p-2 gap-5">
+                        <div className="col-span-2 mt-auto mb-auto">
+                            <h2>Volume (24H)</h2>
+                            <h4
+                                className="text-sm font-bold  text-white"
+                            >
+                                $102,928.98
+                            </h4>
+                        </div>
+                        <div className="col-span-2 mt-auto mb-auto">
+                            <h2>Tokens staked</h2>
+                            <h4
+                                className="text-sm font-bold  text-white"
+                            >
+                                708.1M SUI
+                            </h4>
+                        </div>
+                        <div className="col-span-4 mt-auto mb-auto">
+                            <h2>Next reward distribution in</h2>
+                            <h4
+                                className="text-sm font-bold  text-white"
+                            >
+                                10h 40m 20s
+                            </h4>
+                        </div>
+                        <div className="col-span-2 mt-auto mb-auto flex flex-col">
+                            <h2 className="ml-auto">Avg APY</h2>
+                            <h4
+                                className="text-2xl sm:text-4xl ml-auto tracking-widest font-extrabold text-white"
+                            >4.15%</h4>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
         </div >
