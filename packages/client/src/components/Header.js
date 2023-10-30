@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <nav class="w-full mx-auto max-w-screen-xl p-2 pb-1 mt-0  mb-0 sm:mb-2 md:flex md:items-center md:justify-between">
             <div class=" flex flex-wrap items-center text-xs sm:text-base justify-between mx-auto p-2 w-full">
-                <div class="flex ">
+                <div class="flex">
                     {/* <TrendingUp
                         className="mr-3"
                     /> */}

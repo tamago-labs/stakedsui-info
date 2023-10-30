@@ -49,7 +49,16 @@ const useSui = () => {
             const volUsd = Number(`${vol}`) * suiPrice
             
             return {
-                ...item,
+                name: item.name,
+                description : item.description,
+                imageUrl : item.imageUrl,
+                projectUrl: item.projectUrl,
+                votingPower: item.votingPower,
+                commissionRate : item.commissionRate,
+                nextEpochStake : item.nextEpochStake,
+                nextEpochCommissionRate : item.nextEpochCommissionRate,
+                stakingPoolActivationEpoch : item.stakingPoolActivationEpoch,
+                stakingPoolSuiBalance : item.stakingPoolSuiBalance,
                 vol : `${vol}`,
                 volUsd,
                 suiPrice,
