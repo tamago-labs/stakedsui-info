@@ -31,11 +31,11 @@ const Header = () => {
                         {/* <li class="mt-auto mb-auto">
                             <Link href="/events" class={`block py-2 pl-3 pr-4 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${pathname === "/events" && "underline font-bold"}`}>Events</Link>
                         </li> */}
-                        {/* <li class="mt-auto mb-auto flex flex-row">
-                            <Link href="https://docs.stakedsui.info" class={`block py-2 pl-3 pr-4 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
-                                Docs
+                        <li class="mt-auto mb-auto flex flex-row">
+                            <Link href="https://blog.legato.finance/simple-way-to-track-suis-staking-rewards-and-stake-aee4237356f0" class={`block py-2 pl-3 pr-4 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
+                                How to use
                             </Link> 
-                        </li> */}
+                        </li>
                         {/* <li class="mt-auto mb-auto hidden md:block">
                             <Link href="/magic-pass" class={`block py-2 pl-3 pr-4 rounded hover:underline hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${pathname === "/magic-pass" && "underline font-bold"}`}>Magic Pass</Link>
                         </li> */}
