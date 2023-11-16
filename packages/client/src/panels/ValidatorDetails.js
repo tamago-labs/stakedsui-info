@@ -105,12 +105,11 @@ const ValidatorDetails = ({ visible, close, data }) => {
                         <p>The first batch is available to mint without any conditions, while the latter may require completing a quest.</p>
                     </div> */}
                     <div className=" mt-1 p-2">
-                        <button type="button" disabled={true} class="text-white w-full opacity-60 flex flex-row justify-center items-center bg-blue-700  font-medium rounded  px-5 py-2.5 mr-2 mb-2 focus:outline-none">
-                            Stake via Legato<ArrowRight className="ml-1" />
-                        </button>
-                        <div className="text-center text-xs  ">
-                            <p>Available soon</p>
-                        </div>
+                        <a target="_blank" href="https://app.legato.finance">
+                            <button type="button" class="text-white w-full  flex flex-row justify-center items-center bg-blue-700  font-medium rounded  px-5 py-2.5 mr-2 mb-2 focus:outline-none">
+                                Stake via Legato<ArrowRight className="ml-1" />
+                            </button>
+                        </a>
                     </div>
                 </div>
             )}
